@@ -1,0 +1,9 @@
+xcodeproj: CoordiNode.xcodeproj
+scheme: CoordiNode-Debug
+source_directory: CoordiNode
+output_directory: Slather/Output
+ignore:
+  - Carthage/*
+  - CoordiNodeGenerator/*
+  - CoordiNodeTestComponents/*
+  - CoordiNodeTests/*
