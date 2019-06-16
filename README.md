@@ -1,5 +1,3 @@
-CoordiNode is a lightweight Swift framework for predictably and safely managing the flow of coordinators in your app.
-
 # jpeckner/CoordiNode
 
 iOS apps are increasingly using the [coordinator pattern](http://khanlou.com/2015/10/coordinators-redux/) to manage their view flows. A online search for "iOS coordinator pattern" shows dozens of blog posts written on the topic since 2015. Less clear, though, is how to manage an app's overall *coordinator* flow- that is, how to transition control from one coordinator to another predictably and safely, especially in apps that use [universal links](https://developer.apple.com/ios/universal-links/). 
@@ -34,7 +32,7 @@ Read the [Principles](README.md#Principles) section below to learn how this hier
     ```
 1. After the script completes, add the generated files to your app target.
 1. Build your app. You'll very likely be seeing compile errors! 🙂 That's because the generated code will add protocol extensions to all of your coordinators, and in some of them, you'll need to implement methods for instantiating and/or switching between child coordinators, depending on the coordinator flow state. Be sure to click the "Fix" button that Xcode displays next to each error to make this process as smooth as possible.
-1. Finally, you'll need to trigger transitions between your coordinators at appropriate times for your app. To help with this, CoordiNode includes two classes, `RoutingHandler` and `DestinationRoutingHandler`, which encapsulate all of the generalized logic needed for coordinator transitions. See the Principles section below for more on how this works, as well as [AppCoordinator](https://github.com/jpeckner/PlacesFinder/blob/master/PlacesFinder/PlacesFinder/Modules/App/AppCoordinator.swift) and [HomeCoordinator](https://github.com/jpeckner/PlacesFinder/blob/master/PlacesFinder/PlacesFinder/Modules/App/HomeCoordinator.swift) in PlacesFinder for working examples.
+1. Finally, you'll need to trigger transitions between your coordinators at appropriate times for your app. To help with this, CoordiNode includes two classes, `RoutingHandler` and `DestinationRoutingHandler`, which encapsulate all of the generalized logic needed for coordinator transitions. See the Principles section below for more on how this works, as well as [AppCoordinator](https://github.com/jpeckner/PlacesFinder/blob/master/PlacesFinder/PlacesFinder/Modules/App/AppCoordinator.swift) and [HomeCoordinator](https://github.com/jpeckner/PlacesFinder/blob/master/PlacesFinder/PlacesFinder/Modules/Home/HomeCoordinator.swift) in PlacesFinder for working examples.
 
 # Principles
 
