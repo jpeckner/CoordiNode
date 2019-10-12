@@ -1,0 +1,897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0664F3F187FD76BFC852190801640E5B /* DestinationNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC29B339B0B305057E2DB58D3BD727 /* DestinationNodeProtocol.swift */; };
+		0FAE81D74B93B44C360B72CEC038F8B8 /* SecondGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */; };
+		162F73C71B89F83FB87B9F2A82254CC7 /* NodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */; };
+		16332C3E5F436ADB0681B4746B6BD2CE /* CoordinatorTree+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */; };
+		179CBF6BC81468FF2A09D4998B92E6AC /* Array+Duplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9812DEC40191CED4ECB4460DB827433 /* Array+Duplicates.swift */; };
+		18D914C9F0B5D7BE2576D6F6609B0282 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22E56FC48155325906FE92A32F32FB9E /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
+		27B6E45E16D804749CA5A2430B93A288 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */; };
+		318BB4C216225CC8A63ADD54E98393E8 /* SecondGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */; };
+		326E44406A25AB3C84A9C5CB1DC96F8C /* SecondChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */; };
+		398969AC75A780396BB9B2666E82A786 /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
+		3C4230ABFDACE165DC0432842D992265 /* RoutingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */; };
+		43389C6581F771DD25737EEA7C408F08 /* Yams.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47A6209AB1C6F003E580BD2EEB37103A /* FirstChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41E297D473FADFCD3419EF0C4CF197 /* FirstChildCoordinatorMock.swift */; };
+		4FCF14660DFCB1640128247103BD5686 /* FirstGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */; };
+		514B37AD1196BC83FA5E9E42B1D562C8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8888B7648D89ACFD5C0E85CDC5B3253B /* main.swift */; };
+		57918ECE64DE787418ECF18C374462D5 /* CoordinatorProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389093070FDB7CBCFF8225CC5095550 /* CoordinatorProps.swift */; };
+		57A60A16BDF2E389220B20535DFB6B7A /* CoordinatorTree+Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD4665B3645A33D950CCDF1573A0D8 /* CoordinatorTree+Output.swift */; };
+		6C35802ABBA9F8F48C1F3E4182C1F364 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
+		6E1CA9A432FBFC0EF9964327CC14E1E4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */; };
+		7290D9E4A0FE57BA7C35A6730ADF0BA8 /* CoordiNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */; };
+		790D661C19FBDFEB405BFF17B2B1524E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56C2722719C4980FCC0696AD12BECA /* Project.swift */; };
+		81A27A49746F10ACB3AAB93C3E961282 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */; };
+		8C77C9B5261A64F726B82482FDACA1F5 /* FirstChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41E297D473FADFCD3419EF0C4CF197 /* FirstChildCoordinatorMock.swift */; };
+		96094F33FB53CBCCDDC5838C7931769E /* RoutingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */; };
+		96E6C24C889AB5BE4AE4EB74D7A17D37 /* CoordiNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */; };
+		9DD0DA24BD328703AB4609F281A25BAB /* CoordinatorTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441FD8E3C519317B01529ABD8AE26C /* CoordinatorTree.swift */; };
+		A24653ED82C1B22BBE2CB12E2527E40F /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3093B366E79A02B0521735F754AFA76 /* NodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */; };
+		AA67E3D4A068AFF6F88227376941B22A /* CoordinatorNodeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21CA01E1202410408F6528DB6C41E90 /* CoordinatorNodeProperties.swift */; };
+		AC46032EFC53125EF254ACBBDADF7F20 /* RoutingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */; };
+		B18B0D37A507567E2C1763024425EE7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */; };
+		B9745A0B192927D012522F995C238B31 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */; };
+		BB73E67188000FEB524B2E4106AC8101 /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
+		CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
+		CE3015244080CF5456A2DBC69D6436C5 /* CoordiNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE38D4B03CF55EEF4979AC5BF2CE370B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
+		CF71669A70B63A6F2F877EBA47DAE6DE /* DestinationNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC29B339B0B305057E2DB58D3BD727 /* DestinationNodeProtocol.swift */; };
+		D1DD6810D87AB09277139BB59EF6C080 /* FirstGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */; };
+		D472DBDF8992CAFD907AA36825721DE8 /* DestinationRoutingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2921E3BF18C23FB88373D553E0B2F6 /* DestinationRoutingHandlerTests.swift */; };
+		E82EE5947D57F15525A93DA824A219C4 /* CoordinatorTree+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAFA486FE46966D64807BC5D35466D /* CoordinatorTree+File.swift */; };
+		ED300ABE9767B9456E56DFD0B3F05C33 /* CoordiNode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4A63E9CD2DC5E0907D7B75B0E48FD70 /* SecondChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45D52193400C442110461896C390C2EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C604D94E252099499AADFD151DAF20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29ACC60DA9BBB4DB16C09648C884D353;
+			remoteInfo = CoordiNode;
+		};
+		99EF45FB7790885BC166BBB2D7DA048B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C604D94E252099499AADFD151DAF20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29ACC60DA9BBB4DB16C09648C884D353;
+			remoteInfo = CoordiNode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D67A5997FE05D6F4003123B352E8910 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43389C6581F771DD25737EEA7C408F08 /* Yams.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B060CB462AE7B59ED4FE2C09729BFC06 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED300ABE9767B9456E56DFD0B3F05C33 /* CoordiNode.framework in Embed Frameworks */,
+				A24653ED82C1B22BBE2CB12E2527E40F /* Nimble.framework in Embed Frameworks */,
+				18D914C9F0B5D7BE2576D6F6609B0282 /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09441FD8E3C519317B01529ABD8AE26C /* CoordinatorTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTree.swift; sourceTree = "<group>"; };
+		0A2921E3BF18C23FB88373D553E0B2F6 /* DestinationRoutingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationRoutingHandlerTests.swift; sourceTree = "<group>"; };
+		0A566437E806BDD5DB290B652D179ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADD4665B3645A33D950CCDF1573A0D8 /* CoordinatorTree+Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+Output.swift"; sourceTree = "<group>"; };
+		2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		2F41E297D473FADFCD3419EF0C4CF197 /* FirstChildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChildCoordinatorMock.swift; sourceTree = "<group>"; };
+		48543110650900A573FBF7438607DCDA /* CoordiNode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoordiNode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AAFA486FE46966D64807BC5D35466D /* CoordinatorTree+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+File.swift"; sourceTree = "<group>"; };
+		57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
+		5D76BFB059577283BBF557043D0CD43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		7253D6821EAACD42F2D0DA9C209C9398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingHandlerTests.swift; sourceTree = "<group>"; };
+		7B56C2722719C4980FCC0696AD12BECA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeProtocol.swift; sourceTree = "<group>"; };
+		8888B7648D89ACFD5C0E85CDC5B3253B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildCoordinatorMock.swift; sourceTree = "<group>"; };
+		9D1AC97BE1492AB3F4BDBDED1FDD875D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorMock.swift; sourceTree = "<group>"; };
+		A601BA536AA26418A771D0DAF8123916 /* CoordiNodeTestComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoordiNodeTestComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9812DEC40191CED4ECB4460DB827433 /* Array+Duplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Duplicates.swift"; sourceTree = "<group>"; };
+		AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendentProtocol.swift; sourceTree = "<group>"; };
+		AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordiNode.h; sourceTree = "<group>"; };
+		B08ADB2C12DA8C8CCD7A13DEEC46C4D1 /* CoordiNodeGenerator */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = text; path = CoordiNodeGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0FC29B339B0B305057E2DB58D3BD727 /* DestinationNodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationNodeProtocol.swift; sourceTree = "<group>"; };
+		B389093070FDB7CBCFF8225CC5095550 /* CoordinatorProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProps.swift; sourceTree = "<group>"; };
+		B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingHandler.swift; sourceTree = "<group>"; };
+		C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
+		CA5B669322B18558002E1C86 /* carthage_verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage_verify.sh; sourceTree = "<group>"; };
+		CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+Init.swift"; sourceTree = "<group>"; };
+		D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Yams.framework; sourceTree = "<group>"; };
+		E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CoordiNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		F21CA01E1202410408F6528DB6C41E90 /* CoordinatorNodeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNodeProperties.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ADEEB48A1686DB495B4C052321713EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E6C24C889AB5BE4AE4EB74D7A17D37 /* CoordiNode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2F48D818AB29017AD0AF4AE4723254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18B0D37A507567E2C1763024425EE7C /* Nimble.framework in Frameworks */,
+				7290D9E4A0FE57BA7C35A6730ADF0BA8 /* CoordiNode.framework in Frameworks */,
+				27B6E45E16D804749CA5A2430B93A288 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14956A5657977BCBAF33E66807394B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1CA9A432FBFC0EF9964327CC14E1E4 /* Yams.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FC47B3E2D1B801243CC51651DB1B3E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */,
+				AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */,
+				2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */,
+				B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		1CF10EBD7F67F99945A6BFD7113A3EAB /* CoordiNodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				22987BE1752D258B4716BD77AB943CF3 /* CoordinatorProps */,
+				EBCEBF7131581F772C0F4488E1483FA3 /* CoordinatorTree */,
+				A9812DEC40191CED4ECB4460DB827433 /* Array+Duplicates.swift */,
+				0A566437E806BDD5DB290B652D179ECF /* Info.plist */,
+				8888B7648D89ACFD5C0E85CDC5B3253B /* main.swift */,
+				7B56C2722719C4980FCC0696AD12BECA /* Project.swift */,
+			);
+			path = CoordiNodeGenerator;
+			sourceTree = "<group>";
+		};
+		22987BE1752D258B4716BD77AB943CF3 /* CoordinatorProps */ = {
+			isa = PBXGroup;
+			children = (
+				B389093070FDB7CBCFF8225CC5095550 /* CoordinatorProps.swift */,
+			);
+			path = CoordinatorProps;
+			sourceTree = "<group>";
+		};
+		22C287FD3AAD376B72A0317711CB6AB2 /* CoordinatorMocks */ = {
+			isa = PBXGroup;
+			children = (
+				2F41E297D473FADFCD3419EF0C4CF197 /* FirstChildCoordinatorMock.swift */,
+				57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */,
+				A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */,
+				98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */,
+				C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */,
+			);
+			path = CoordinatorMocks;
+			sourceTree = "<group>";
+		};
+		419FB7AEAF6025938154000E728A6534 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				D23C44B6716B58EAC44D8A8DF8023C1A /* iOS */,
+				EFE736E656E7A6077A49AB97AE7EE090 /* Mac */,
+			);
+			name = Carthage;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		482E89D62C1F7F5FB6FB6730DDEC9470 /* CoordiNode */ = {
+			isa = PBXGroup;
+			children = (
+				08FC47B3E2D1B801243CC51651DB1B3E /* Coordinators */,
+				FF014B7B6058C6E4199BEDF22EA78BCB /* Nodes */,
+				9D1AC97BE1492AB3F4BDBDED1FDD875D /* Info.plist */,
+				AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */,
+			);
+			path = CoordiNode;
+			sourceTree = "<group>";
+		};
+		6D72DD2F502EFE8A39C3D8FD01E3900E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48543110650900A573FBF7438607DCDA /* CoordiNode.framework */,
+				B08ADB2C12DA8C8CCD7A13DEEC46C4D1 /* CoordiNodeGenerator */,
+				A601BA536AA26418A771D0DAF8123916 /* CoordiNodeTestComponents.framework */,
+				E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E61C97B37458BB825348A3E025D3D2B /* CoordiNodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE364F79AAD087F67D65EA1A8CCCBEBB /* Tests */,
+				5D76BFB059577283BBF557043D0CD43A /* Info.plist */,
+			);
+			path = CoordiNodeTests;
+			sourceTree = "<group>";
+		};
+		95644D9BDEEB4AF4B796C051A88B6D1C /* CoordiNodeTestComponents */ = {
+			isa = PBXGroup;
+			children = (
+				22C287FD3AAD376B72A0317711CB6AB2 /* CoordinatorMocks */,
+				7253D6821EAACD42F2D0DA9C209C9398 /* Info.plist */,
+			);
+			path = CoordiNodeTestComponents;
+			sourceTree = "<group>";
+		};
+		B88ABBC7CCB97C3CFCCDCE2887CD0DB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				419FB7AEAF6025938154000E728A6534 /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA5B669222B18558002E1C86 /* BuildScripts */ = {
+			isa = PBXGroup;
+			children = (
+				CA5B669322B18558002E1C86 /* carthage_verify.sh */,
+			);
+			path = BuildScripts;
+			sourceTree = "<group>";
+		};
+		D23C44B6716B58EAC44D8A8DF8023C1A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */,
+				E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D978D86E37FAF81C87AE1CBD59062076 = {
+			isa = PBXGroup;
+			children = (
+				CA5B669222B18558002E1C86 /* BuildScripts */,
+				482E89D62C1F7F5FB6FB6730DDEC9470 /* CoordiNode */,
+				1CF10EBD7F67F99945A6BFD7113A3EAB /* CoordiNodeGenerator */,
+				95644D9BDEEB4AF4B796C051A88B6D1C /* CoordiNodeTestComponents */,
+				8E61C97B37458BB825348A3E025D3D2B /* CoordiNodeTests */,
+				B88ABBC7CCB97C3CFCCDCE2887CD0DB8 /* Frameworks */,
+				6D72DD2F502EFE8A39C3D8FD01E3900E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBCEBF7131581F772C0F4488E1483FA3 /* CoordinatorTree */ = {
+			isa = PBXGroup;
+			children = (
+				F21CA01E1202410408F6528DB6C41E90 /* CoordinatorNodeProperties.swift */,
+				09441FD8E3C519317B01529ABD8AE26C /* CoordinatorTree.swift */,
+				50AAFA486FE46966D64807BC5D35466D /* CoordinatorTree+File.swift */,
+				CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */,
+				2ADD4665B3645A33D950CCDF1573A0D8 /* CoordinatorTree+Output.swift */,
+			);
+			path = CoordinatorTree;
+			sourceTree = "<group>";
+		};
+		ED780730AC79006EFBEEAC9889D71ED6 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				0A2921E3BF18C23FB88373D553E0B2F6 /* DestinationRoutingHandlerTests.swift */,
+				772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		EFE736E656E7A6077A49AB97AE7EE090 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		FE364F79AAD087F67D65EA1A8CCCBEBB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ED780730AC79006EFBEEAC9889D71ED6 /* Routing */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FF014B7B6058C6E4199BEDF22EA78BCB /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				B0FC29B339B0B305057E2DB58D3BD727 /* DestinationNodeProtocol.swift */,
+				7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EF025A4B05B69688562B2619FF284154 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3015244080CF5456A2DBC69D6436C5 /* CoordiNode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29ACC60DA9BBB4DB16C09648C884D353 /* CoordiNode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBA3E120FDE5F738D4B68AD7D60B820E /* Build configuration list for PBXNativeTarget "CoordiNode" */;
+			buildPhases = (
+				EF025A4B05B69688562B2619FF284154 /* Headers */,
+				9425264F5E7A4927326CB2E6AA866CCC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoordiNode;
+			productName = CoordiNode;
+			productReference = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3E0CA7AECCC6436BFBC86603D66E450B /* CoordiNodeGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C507C808911013592C4F49684E3BFEF8 /* Build configuration list for PBXNativeTarget "CoordiNodeGenerator" */;
+			buildPhases = (
+				CA89B87822B1B31100CBECE0 /* Carthage Verify */,
+				5C68F88456090AA4C0D23401E46FF8FC /* Sources */,
+				A14956A5657977BCBAF33E66807394B6 /* Frameworks */,
+				8D67A5997FE05D6F4003123B352E8910 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoordiNodeGenerator;
+			productName = CoordiNodeGenerator;
+			productReference = B08ADB2C12DA8C8CCD7A13DEEC46C4D1 /* CoordiNodeGenerator */;
+			productType = "com.apple.product-type.tool";
+		};
+		8E1C898C8A6B157D382580936D155556 /* CoordiNodeTestComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA450A516DE5913ED18E837C1199B3D9 /* Build configuration list for PBXNativeTarget "CoordiNodeTestComponents" */;
+			buildPhases = (
+				7BD9CC6FFD0EB3457D068A43FB0A38B8 /* Sources */,
+				2ADEEB48A1686DB495B4C052321713EB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52C3387156E4D2D23461FB10BE588DE4 /* PBXTargetDependency */,
+			);
+			name = CoordiNodeTestComponents;
+			productName = CoordiNodeTestComponents;
+			productReference = A601BA536AA26418A771D0DAF8123916 /* CoordiNodeTestComponents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE60E3823C4128971B657A50680BD7C6 /* CoordiNodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE7934F730C83E74C3906102FCE5D2B /* Build configuration list for PBXNativeTarget "CoordiNodeTests" */;
+			buildPhases = (
+				CA89B87922B1B32A00CBECE0 /* Carthage Verify */,
+				4DD3741C6E501F23CF4BFA4895A7D7C1 /* Sources */,
+				7F2F48D818AB29017AD0AF4AE4723254 /* Frameworks */,
+				B060CB462AE7B59ED4FE2C09729BFC06 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB5961CDBC9D00ED834EBC19E329A815 /* PBXTargetDependency */,
+			);
+			name = CoordiNodeTests;
+			productName = CoordiNodeTests;
+			productReference = E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72C604D94E252099499AADFD151DAF20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Justin Peckner";
+			};
+			buildConfigurationList = D3914FF74CB45FD2F3CAC0E0C1EEBE03 /* Build configuration list for PBXProject "CoordiNode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D978D86E37FAF81C87AE1CBD59062076;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29ACC60DA9BBB4DB16C09648C884D353 /* CoordiNode */,
+				3E0CA7AECCC6436BFBC86603D66E450B /* CoordiNodeGenerator */,
+				8E1C898C8A6B157D382580936D155556 /* CoordiNodeTestComponents */,
+				BE60E3823C4128971B657A50680BD7C6 /* CoordiNodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA89B87822B1B31100CBECE0 /* Carthage Verify */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Verify";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/BuildScripts/carthage_verify.sh\"\n";
+		};
+		CA89B87922B1B32A00CBECE0 /* Carthage Verify */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Verify";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/BuildScripts/carthage_verify.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DD3741C6E501F23CF4BFA4895A7D7C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE38D4B03CF55EEF4979AC5BF2CE370B /* CoordinatorProtocol.swift in Sources */,
+				CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */,
+				0664F3F187FD76BFC852190801640E5B /* DestinationNodeProtocol.swift in Sources */,
+				D472DBDF8992CAFD907AA36825721DE8 /* DestinationRoutingHandlerTests.swift in Sources */,
+				47A6209AB1C6F003E580BD2EEB37103A /* FirstChildCoordinatorMock.swift in Sources */,
+				D1DD6810D87AB09277139BB59EF6C080 /* FirstGrandchildCoordinatorMock.swift in Sources */,
+				A3093B366E79A02B0521735F754AFA76 /* NodeProtocol.swift in Sources */,
+				BB73E67188000FEB524B2E4106AC8101 /* RootCoordinatorMock.swift in Sources */,
+				81A27A49746F10ACB3AAB93C3E961282 /* RouterProtocol.swift in Sources */,
+				AC46032EFC53125EF254ACBBDADF7F20 /* RoutingHandler.swift in Sources */,
+				3C4230ABFDACE165DC0432842D992265 /* RoutingHandlerTests.swift in Sources */,
+				F4A63E9CD2DC5E0907D7B75B0E48FD70 /* SecondChildCoordinatorMock.swift in Sources */,
+				318BB4C216225CC8A63ADD54E98393E8 /* SecondGrandchildCoordinatorMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C68F88456090AA4C0D23401E46FF8FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179CBF6BC81468FF2A09D4998B92E6AC /* Array+Duplicates.swift in Sources */,
+				AA67E3D4A068AFF6F88227376941B22A /* CoordinatorNodeProperties.swift in Sources */,
+				57918ECE64DE787418ECF18C374462D5 /* CoordinatorProps.swift in Sources */,
+				E82EE5947D57F15525A93DA824A219C4 /* CoordinatorTree+File.swift in Sources */,
+				16332C3E5F436ADB0681B4746B6BD2CE /* CoordinatorTree+Init.swift in Sources */,
+				57A60A16BDF2E389220B20535DFB6B7A /* CoordinatorTree+Output.swift in Sources */,
+				9DD0DA24BD328703AB4609F281A25BAB /* CoordinatorTree.swift in Sources */,
+				790D661C19FBDFEB405BFF17B2B1524E /* Project.swift in Sources */,
+				514B37AD1196BC83FA5E9E42B1D562C8 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD9CC6FFD0EB3457D068A43FB0A38B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C77C9B5261A64F726B82482FDACA1F5 /* FirstChildCoordinatorMock.swift in Sources */,
+				4FCF14660DFCB1640128247103BD5686 /* FirstGrandchildCoordinatorMock.swift in Sources */,
+				22E56FC48155325906FE92A32F32FB9E /* RootCoordinatorMock.swift in Sources */,
+				326E44406A25AB3C84A9C5CB1DC96F8C /* SecondChildCoordinatorMock.swift in Sources */,
+				0FAE81D74B93B44C360B72CEC038F8B8 /* SecondGrandchildCoordinatorMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9425264F5E7A4927326CB2E6AA866CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C35802ABBA9F8F48C1F3E4182C1F364 /* CoordinatorProtocol.swift in Sources */,
+				398969AC75A780396BB9B2666E82A786 /* DescendentProtocol.swift in Sources */,
+				CF71669A70B63A6F2F877EBA47DAE6DE /* DestinationNodeProtocol.swift in Sources */,
+				162F73C71B89F83FB87B9F2A82254CC7 /* NodeProtocol.swift in Sources */,
+				B9745A0B192927D012522F995C238B31 /* RouterProtocol.swift in Sources */,
+				96094F33FB53CBCCDDC5838C7931769E /* RoutingHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52C3387156E4D2D23461FB10BE588DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ACC60DA9BBB4DB16C09648C884D353 /* CoordiNode */;
+			targetProxy = 45D52193400C442110461896C390C2EA /* PBXContainerItemProxy */;
+		};
+		FB5961CDBC9D00ED834EBC19E329A815 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ACC60DA9BBB4DB16C09648C884D353 /* CoordiNode */;
+			targetProxy = 99EF45FB7790885BC166BBB2D7DA048B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		246B3CCEC0B4B76514CE6A8FEDB7DEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		47A19B9373FFD6F32E279089E0010E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = CoordiNodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54C494049E10F680F74BFA9CDECA2F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoordiNodeTestComponents/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTestComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		9A428CB1390C240A1300F195F149D732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoordiNodeTestComponents/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTestComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BEE77E581E49B7502CD2FA600A539226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = CoordiNodeGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeGenerator;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C2EECFC4CD27A296A808C1EC5DD24904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoordiNode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		CCAF46D98C51D53C9B33CC28AC482662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoordiNode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		ECB13F35DDC50D50B8A9E107F1701B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = CoordiNodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7F257178664319A336C0B709EAFBA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = CoordiNodeGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeGenerator;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FE5F75944F093ABDAAFD660D6C90251F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C507C808911013592C4F49684E3BFEF8 /* Build configuration list for PBXNativeTarget "CoordiNodeGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F257178664319A336C0B709EAFBA95 /* Debug */,
+				BEE77E581E49B7502CD2FA600A539226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		D3914FF74CB45FD2F3CAC0E0C1EEBE03 /* Build configuration list for PBXProject "CoordiNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246B3CCEC0B4B76514CE6A8FEDB7DEEA /* Debug */,
+				FE5F75944F093ABDAAFD660D6C90251F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EA450A516DE5913ED18E837C1199B3D9 /* Build configuration list for PBXNativeTarget "CoordiNodeTestComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C494049E10F680F74BFA9CDECA2F7F /* Debug */,
+				9A428CB1390C240A1300F195F149D732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		EAE7934F730C83E74C3906102FCE5D2B /* Build configuration list for PBXNativeTarget "CoordiNodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A19B9373FFD6F32E279089E0010E85 /* Debug */,
+				ECB13F35DDC50D50B8A9E107F1701B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		FBA3E120FDE5F738D4B68AD7D60B820E /* Build configuration list for PBXNativeTarget "CoordiNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF46D98C51D53C9B33CC28AC482662 /* Debug */,
+				C2EECFC4CD27A296A808C1EC5DD24904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72C604D94E252099499AADFD151DAF20 /* Project object */;
+}
