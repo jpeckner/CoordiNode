@@ -1,6 +1,6 @@
 # jpeckner/CoordiNode
 
-iOS apps are increasingly using the [coordinator pattern](http://khanlou.com/2015/10/coordinators-redux/) to manage their view flows. A online search for "iOS coordinator pattern" shows dozens of blog posts written on the topic since 2015. Less clear, though, is how to manage an app's overall *coordinator* flow- that is, how to transition control from one coordinator to another predictably and safely, especially in apps that use [universal links](https://developer.apple.com/ios/universal-links/). 
+iOS apps are increasingly using the [coordinator pattern](http://khanlou.com/2015/10/coordinators-redux/) to manage their view flows. An online search for "iOS coordinator pattern" shows dozens of blog posts written on the topic since 2015. Less clear, though, is how to manage an app's overall *coordinator* flow- that is, how to transition control from one coordinator to another predictably and safely, especially in apps that use [universal links](https://developer.apple.com/ios/universal-links/). 
 
 CoordiNode provides the tools you need to manage this flow in a simple, clean, and consistent way. It also integrates seemlessly with state management systems like Redux (though using such a system is not required). Unlike frameworks such as [route-composer](https://github.com/saksdirect/route-composer) and [XCoordinator](https://github.com/quickbirdstudios/XCoordinator), CoordiNode is completely UI-agnostic, making it simple to implement and maintain.
 
