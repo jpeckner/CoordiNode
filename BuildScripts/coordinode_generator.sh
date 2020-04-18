@@ -2,21 +2,14 @@
 
 set -e
 
-PROJECT_FILE=../CoordiNode.xcodeproj
 SCHEME_NAME=CoordiNodeGenerator
-
 moduleStructureFile=$1
 outputDir=$2
-buildDir="$(xcodebuild -project $PROJECT_FILE -scheme $SCHEME_NAME -showBuildSettings | grep  -m 1 'BUILD_DIR' | grep -oEi '\/.*')"
 
-xcodebuild                              \
-  -project $PROJECT_FILE                \
-  -scheme $SCHEME_NAME                  \
-  -sdk macosx                           \
-  -quiet                                \
-  build                                 \
-  CONFIGURATION_BUILD_DIR="$buildDir"
+./make_coordinode_generator.sh $(pwd)
 
-$buildDir/$SCHEME_NAME                  \
+$(pwd)/$SCHEME_NAME                  \
   "$moduleStructureFile"                \
   "$outputDir"
+  
+rm $(pwd)/$SCHEME_NAME
