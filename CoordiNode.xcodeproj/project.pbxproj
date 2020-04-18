@@ -41,6 +41,8 @@
 		B18B0D37A507567E2C1763024425EE7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */; };
 		B9745A0B192927D012522F995C238B31 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */; };
 		BB73E67188000FEB524B2E4106AC8101 /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
+		CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */; };
+		CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299D244B8182003A3B55 /* StubNode.swift */; };
 		CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
 		CE3015244080CF5456A2DBC69D6436C5 /* CoordiNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE38D4B03CF55EEF4979AC5BF2CE370B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
@@ -125,6 +127,8 @@
 		B389093070FDB7CBCFF8225CC5095550 /* CoordinatorProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProps.swift; sourceTree = "<group>"; };
 		B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingHandler.swift; sourceTree = "<group>"; };
 		C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
+		CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingHandlerProtocolMock.swift; sourceTree = "<group>"; };
+		CA4C299D244B8182003A3B55 /* StubNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubNode.swift; sourceTree = "<group>"; };
 		CA5B669322B18558002E1C86 /* carthage_verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage_verify.sh; sourceTree = "<group>"; };
 		CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+Init.swift"; sourceTree = "<group>"; };
 		D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				22C287FD3AAD376B72A0317711CB6AB2 /* CoordinatorMocks */,
+				CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */,
+				CA4C299D244B8182003A3B55 /* StubNode.swift */,
 				7253D6821EAACD42F2D0DA9C209C9398 /* Info.plist */,
 			);
 			path = CoordiNodeTestComponents;
@@ -535,7 +541,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */,
 				8C77C9B5261A64F726B82482FDACA1F5 /* FirstChildCoordinatorMock.swift in Sources */,
+				CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */,
 				4FCF14660DFCB1640128247103BD5686 /* FirstGrandchildCoordinatorMock.swift in Sources */,
 				22E56FC48155325906FE92A32F32FB9E /* RootCoordinatorMock.swift in Sources */,
 				326E44406A25AB3C84A9C5CB1DC96F8C /* SecondChildCoordinatorMock.swift in Sources */,
