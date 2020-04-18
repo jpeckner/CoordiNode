@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,14 +19,12 @@
 		326E44406A25AB3C84A9C5CB1DC96F8C /* SecondChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */; };
 		398969AC75A780396BB9B2666E82A786 /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
 		3C4230ABFDACE165DC0432842D992265 /* RoutingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */; };
-		43389C6581F771DD25737EEA7C408F08 /* Yams.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47A6209AB1C6F003E580BD2EEB37103A /* FirstChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41E297D473FADFCD3419EF0C4CF197 /* FirstChildCoordinatorMock.swift */; };
 		4FCF14660DFCB1640128247103BD5686 /* FirstGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */; };
 		514B37AD1196BC83FA5E9E42B1D562C8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8888B7648D89ACFD5C0E85CDC5B3253B /* main.swift */; };
 		57918ECE64DE787418ECF18C374462D5 /* CoordinatorProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389093070FDB7CBCFF8225CC5095550 /* CoordinatorProps.swift */; };
 		57A60A16BDF2E389220B20535DFB6B7A /* CoordinatorTree+Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD4665B3645A33D950CCDF1573A0D8 /* CoordinatorTree+Output.swift */; };
 		6C35802ABBA9F8F48C1F3E4182C1F364 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
-		6E1CA9A432FBFC0EF9964327CC14E1E4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */; };
 		7290D9E4A0FE57BA7C35A6730ADF0BA8 /* CoordiNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */; };
 		790D661C19FBDFEB405BFF17B2B1524E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56C2722719C4980FCC0696AD12BECA /* Project.swift */; };
 		81A27A49746F10ACB3AAB93C3E961282 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */; };
@@ -43,6 +41,7 @@
 		BB73E67188000FEB524B2E4106AC8101 /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
 		CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */; };
 		CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299D244B8182003A3B55 /* StubNode.swift */; };
+		CA4C29B5244BA142003A3B55 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = CA4C29B4244BA142003A3B55 /* Yams */; };
 		CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
 		CE3015244080CF5456A2DBC69D6436C5 /* CoordiNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE38D4B03CF55EEF4979AC5BF2CE370B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
@@ -72,17 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8D67A5997FE05D6F4003123B352E8910 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				43389C6581F771DD25737EEA7C408F08 /* Yams.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B060CB462AE7B59ED4FE2C09729BFC06 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E1CA9A432FBFC0EF9964327CC14E1E4 /* Yams.framework in Frameworks */,
+				CA4C29B5244BA142003A3B55 /* Yams in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,16 +370,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C507C808911013592C4F49684E3BFEF8 /* Build configuration list for PBXNativeTarget "CoordiNodeGenerator" */;
 			buildPhases = (
-				CA89B87822B1B31100CBECE0 /* Carthage Verify */,
 				5C68F88456090AA4C0D23401E46FF8FC /* Sources */,
 				A14956A5657977BCBAF33E66807394B6 /* Frameworks */,
-				8D67A5997FE05D6F4003123B352E8910 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CoordiNodeGenerator;
+			packageProductDependencies = (
+				CA4C29B4244BA142003A3B55 /* Yams */,
+			);
 			productName = CoordiNodeGenerator;
 			productReference = B08ADB2C12DA8C8CCD7A13DEEC46C4D1 /* CoordiNodeGenerator */;
 			productType = "com.apple.product-type.tool";
@@ -450,6 +439,9 @@
 				Base,
 			);
 			mainGroup = D978D86E37FAF81C87AE1CBD59062076;
+			packageReferences = (
+				CA4C29B3244BA142003A3B55 /* XCRemoteSwiftPackageReference "Yams" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -462,24 +454,6 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CA89B87822B1B31100CBECE0 /* Carthage Verify */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Carthage Verify";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/BuildScripts/carthage_verify.sh\"\n";
-		};
 		CA89B87922B1B32A00CBECE0 /* Carthage Verify */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -903,6 +877,25 @@
 			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA4C29B3244BA142003A3B55 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA4C29B4244BA142003A3B55 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA4C29B3244BA142003A3B55 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72C604D94E252099499AADFD151DAF20 /* Project object */;
 }
