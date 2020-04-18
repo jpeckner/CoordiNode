@@ -1,0 +1,13 @@
+//
+//  StubNode.swift
+//  CoordiNodeTestComponents
+//
+//  Created by Justin Peckner.
+//  Copyright © 2019 Justin Peckner. All rights reserved.
+//
+
+import CoordiNode
+
+public enum StubNode: NodeProtocol {}
+
+public enum StubDestinationNode: DestinationNodeProtocol {}
