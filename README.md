@@ -6,29 +6,36 @@ CoordiNode provides the tools you need to manage this flow in a simple, clean, a
 
 # Installation
 
-## Prerequisites
+### CocoaPods
 
-The CoordiNode target itself has no dependencies, but its test target, and its code generation utility, require [Carthage](https://github.com/Carthage/Carthage#quick-start). After installing Carthage, run the following in the Terminal:
-```
-$ cd path/to/CoordiNode/BuildScripts
-$ ./run_carthage_bootstrap.sh
-```
+Add the following to your Podfile, then run `pod install`:
 
-## Defining your coordinator hierarchy
-Before adding CoordiNode to your app, you'll need to define your app's coordinator hierarchy in a small YAML file. It will then be used to auto-generate several files of boilerplate Swift code (just like [Sourcery](https://github.com/krzysztofzablocki/Sourcery) does), which you'll then add to your app target. You'll still need to write some additional code in your coordinators, but the generated code will help guide that process.
+`pod 'CoordiNode', :git => 'https://github.com/jpeckner/CoordiNode.git'`
+
+### Carthage
+
+Add the following to your Cartfile, then run `carthage update CoordiNode`:
+
+`github "jpeckner/CoordiNode"`
+
+### Submodule/manually
+
+If you prefer not to use either of the above dependency managers, you can integrate CoordiNode into your project manually.
+
+# Usage
+
+### Defining your coordinator hierarchy
+Before fully integrating CoordiNode to your app, you'll need to define your app's coordinator hierarchy in a small YAML file. It will then be used to auto-generate several files of boilerplate Swift code (just like [Sourcery](https://github.com/krzysztofzablocki/Sourcery) does), which you'll then add to your app target. You'll still need to write some additional code in your coordinators, but the generated code will help guide that process.
 
 Read the [Principles](README.md#Principles) section below to learn how this hierarchy works. You can also see [PlacesFinder](https://github.com/jpeckner/PlacesFinder) for an example app that uses CoordiNode, including [the YAML file it uses](https://github.com/jpeckner/PlacesFinder/blob/master/PlacesFinder/PlacesFinder/CoordiNode/ModuleStructure.yml).
 
-## Running the generator script
+### Running the generator script
 
-1. Add CoordiNode to your app as a submodule or Carthage dependency.
 1. Make sure that your coordinator classes have been defined in your app target, even if they're currently empty.
 1. Create an empty directory in your app project folder; this will be where CoordiNode outputs the generated boilerplate code.
 1. In the Terminal, run:
     ```
-    $ cd path/to/CoordiNode/BuildScripts
-    $ chmod +x coordinode_generator.sh
-    $ ./coordinode_generator.sh <path_to_YAML_file> <path_to_output_directory>
+    $ <path_to_CoordiNode_repo>/CoordiNode/Resources/CoordiNodeGenerator <path_to_YAML_file> <path_to_output_directory>
     ```
 1. After the script completes, add the generated files to your app target.
 1. Build your app. You'll very likely be seeing compile errors! 🙂 That's because the generated code will add protocol extensions to all of your coordinators, and in some of them, you'll need to implement methods for instantiating and/or switching between child coordinators, depending on the coordinator flow state. Be sure to click the "Fix" button that Xcode displays next to each error to make this process as smooth as possible.
@@ -59,7 +66,7 @@ CoordiNode is based on the following principles, which will likely feel familiar
 
    Consider `LaunchCoordinator` again- when it's finished launching the app, another coordinator has to be designated as the next one to become and remain active. But not every coordinator is necessarily eligible for this. Only certain coordinators, like `SearchCoordinator` and `SettingsCoordinator`, are potential "destinations"- i.e., they manage UI content, handle user input, or have some other tangible impact on UX for an extended period of time. Others, such as `AppCoordinator` and `HomeCoordinator`, are instantiated only to reach destination coordinators further down the tree; they themselves should never be designated as the destination coordinator. 
    
-   As such, CoordiNode's protocols and methods are structured to enforce, at compile-time, that only coordinators implementing `protocol DestinationCoordinatorProtocol` can be designated as the next destination coordinator. By default, the script implements `DestinationCoordinatorProtocol` on each coordinator if and only if it's a leaf, but you can customize this via each coordinator's `isDestinationNode` boolean in your YAML file.
+   As such, CoordiNode's protocols and methods are structured to enforce, at compile-time, that only coordinators implementing `DestinationCoordinatorProtocol` can be designated as the next destination coordinator. By default, the script implements `DestinationCoordinatorProtocol` on each coordinator if and only if it's a leaf, but you can customize this via each coordinator's `isDestinationNode` boolean in your YAML file.
 
 # Further Reading
 
