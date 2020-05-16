@@ -12,9 +12,7 @@
 		162F73C71B89F83FB87B9F2A82254CC7 /* NodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */; };
 		16332C3E5F436ADB0681B4746B6BD2CE /* CoordinatorTree+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */; };
 		179CBF6BC81468FF2A09D4998B92E6AC /* Array+Duplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9812DEC40191CED4ECB4460DB827433 /* Array+Duplicates.swift */; };
-		18D914C9F0B5D7BE2576D6F6609B0282 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22E56FC48155325906FE92A32F32FB9E /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
-		27B6E45E16D804749CA5A2430B93A288 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */; };
 		318BB4C216225CC8A63ADD54E98393E8 /* SecondGrandchildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */; };
 		326E44406A25AB3C84A9C5CB1DC96F8C /* SecondChildCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A173223B0B944EF4E5D2E4B622F5EA /* SecondChildCoordinatorMock.swift */; };
 		398969AC75A780396BB9B2666E82A786 /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
@@ -32,16 +30,16 @@
 		96094F33FB53CBCCDDC5838C7931769E /* RoutingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */; };
 		96E6C24C889AB5BE4AE4EB74D7A17D37 /* CoordiNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48543110650900A573FBF7438607DCDA /* CoordiNode.framework */; };
 		9DD0DA24BD328703AB4609F281A25BAB /* CoordinatorTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441FD8E3C519317B01529ABD8AE26C /* CoordinatorTree.swift */; };
-		A24653ED82C1B22BBE2CB12E2527E40F /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3093B366E79A02B0521735F754AFA76 /* NodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C824083B73772D48384429805E7CDE2 /* NodeProtocol.swift */; };
 		AA67E3D4A068AFF6F88227376941B22A /* CoordinatorNodeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21CA01E1202410408F6528DB6C41E90 /* CoordinatorNodeProperties.swift */; };
 		AC46032EFC53125EF254ACBBDADF7F20 /* RoutingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4A56EB701A9A1B682C9F6E021829E /* RoutingHandler.swift */; };
-		B18B0D37A507567E2C1763024425EE7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */; };
 		B9745A0B192927D012522F995C238B31 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DDFF43FF650B3E3736D57C2595B19 /* RouterProtocol.swift */; };
 		BB73E67188000FEB524B2E4106AC8101 /* RootCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D483FD3F3EF7D1A665E0D9307553 /* RootCoordinatorMock.swift */; };
 		CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */; };
 		CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299D244B8182003A3B55 /* StubNode.swift */; };
 		CA4C29B5244BA142003A3B55 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = CA4C29B4244BA142003A3B55 /* Yams */; };
+		CAD3B323247075DB00ED010F /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = CAD3B322247075DB00ED010F /* Nimble */; };
+		CAD3B3262470767F00ED010F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = CAD3B3252470767F00ED010F /* Quick */; };
 		CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
 		CE3015244080CF5456A2DBC69D6436C5 /* CoordiNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AF87ED0C90111A7633D538E8DCA9B83B /* CoordiNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE38D4B03CF55EEF4979AC5BF2CE370B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */; };
@@ -78,8 +76,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ED300ABE9767B9456E56DFD0B3F05C33 /* CoordiNode.framework in Embed Frameworks */,
-				A24653ED82C1B22BBE2CB12E2527E40F /* Nimble.framework in Embed Frameworks */,
-				18D914C9F0B5D7BE2576D6F6609B0282 /* Quick.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +93,6 @@
 		50AAFA486FE46966D64807BC5D35466D /* CoordinatorTree+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+File.swift"; sourceTree = "<group>"; };
 		57EA6A27A76410ECB1BA698C45BA3E99 /* FirstGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
 		5D76BFB059577283BBF557043D0CD43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		7253D6821EAACD42F2D0DA9C209C9398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingHandlerTests.swift; sourceTree = "<group>"; };
 		7B56C2722719C4980FCC0696AD12BECA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -117,12 +112,9 @@
 		C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
 		CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingHandlerProtocolMock.swift; sourceTree = "<group>"; };
 		CA4C299D244B8182003A3B55 /* StubNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubNode.swift; sourceTree = "<group>"; };
-		CA5B669322B18558002E1C86 /* carthage_verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage_verify.sh; sourceTree = "<group>"; };
 		CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+Init.swift"; sourceTree = "<group>"; };
 		D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Yams.framework; sourceTree = "<group>"; };
-		E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CoordiNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordiNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21CA01E1202410408F6528DB6C41E90 /* CoordinatorNodeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNodeProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,9 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B18B0D37A507567E2C1763024425EE7C /* Nimble.framework in Frameworks */,
+				CAD3B3262470767F00ED010F /* Quick in Frameworks */,
 				7290D9E4A0FE57BA7C35A6730ADF0BA8 /* CoordiNode.framework in Frameworks */,
-				27B6E45E16D804749CA5A2430B93A288 /* Quick.framework in Frameworks */,
+				CAD3B323247075DB00ED010F /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,16 +192,6 @@
 			path = CoordinatorMocks;
 			sourceTree = "<group>";
 		};
-		419FB7AEAF6025938154000E728A6534 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				D23C44B6716B58EAC44D8A8DF8023C1A /* iOS */,
-				EFE736E656E7A6077A49AB97AE7EE090 /* Mac */,
-			);
-			name = Carthage;
-			path = Carthage/Build;
-			sourceTree = "<group>";
-		};
 		482E89D62C1F7F5FB6FB6730DDEC9470 /* CoordiNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,40 +234,13 @@
 			path = CoordiNodeTestComponents;
 			sourceTree = "<group>";
 		};
-		B88ABBC7CCB97C3CFCCDCE2887CD0DB8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				419FB7AEAF6025938154000E728A6534 /* Carthage */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CA5B669222B18558002E1C86 /* BuildScripts */ = {
-			isa = PBXGroup;
-			children = (
-				CA5B669322B18558002E1C86 /* carthage_verify.sh */,
-			);
-			path = BuildScripts;
-			sourceTree = "<group>";
-		};
-		D23C44B6716B58EAC44D8A8DF8023C1A /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				71E42CC1B39681552237CEA904D5F3D7 /* Nimble.framework */,
-				E59AC2E59D4972B48302710C876A8F12 /* Quick.framework */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
 		D978D86E37FAF81C87AE1CBD59062076 = {
 			isa = PBXGroup;
 			children = (
-				CA5B669222B18558002E1C86 /* BuildScripts */,
 				482E89D62C1F7F5FB6FB6730DDEC9470 /* CoordiNode */,
 				1CF10EBD7F67F99945A6BFD7113A3EAB /* CoordiNodeGenerator */,
 				95644D9BDEEB4AF4B796C051A88B6D1C /* CoordiNodeTestComponents */,
 				8E61C97B37458BB825348A3E025D3D2B /* CoordiNodeTests */,
-				B88ABBC7CCB97C3CFCCDCE2887CD0DB8 /* Frameworks */,
 				6D72DD2F502EFE8A39C3D8FD01E3900E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -309,14 +264,6 @@
 				772D9930F00CDF05BB8C2E37C45F8C48 /* RoutingHandlerTests.swift */,
 			);
 			path = Routing;
-			sourceTree = "<group>";
-		};
-		EFE736E656E7A6077A49AB97AE7EE090 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				E0AB0ADA0EE79A5161E0D6F5DD30E690 /* Yams.framework */,
-			);
-			path = Mac;
 			sourceTree = "<group>";
 		};
 		FE364F79AAD087F67D65EA1A8CCCBEBB /* Tests */ = {
@@ -406,7 +353,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAE7934F730C83E74C3906102FCE5D2B /* Build configuration list for PBXNativeTarget "CoordiNodeTests" */;
 			buildPhases = (
-				CA89B87922B1B32A00CBECE0 /* Carthage Verify */,
 				4DD3741C6E501F23CF4BFA4895A7D7C1 /* Sources */,
 				7F2F48D818AB29017AD0AF4AE4723254 /* Frameworks */,
 				B060CB462AE7B59ED4FE2C09729BFC06 /* Embed Frameworks */,
@@ -417,6 +363,10 @@
 				FB5961CDBC9D00ED834EBC19E329A815 /* PBXTargetDependency */,
 			);
 			name = CoordiNodeTests;
+			packageProductDependencies = (
+				CAD3B322247075DB00ED010F /* Nimble */,
+				CAD3B3252470767F00ED010F /* Quick */,
+			);
 			productName = CoordiNodeTests;
 			productReference = E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -441,6 +391,8 @@
 			mainGroup = D978D86E37FAF81C87AE1CBD59062076;
 			packageReferences = (
 				CA4C29B3244BA142003A3B55 /* XCRemoteSwiftPackageReference "Yams" */,
+				CAD3B321247075DB00ED010F /* XCRemoteSwiftPackageReference "Nimble" */,
+				CAD3B3242470767F00ED010F /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,27 +404,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CA89B87922B1B32A00CBECE0 /* Carthage Verify */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Carthage Verify";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/BuildScripts/carthage_verify.sh\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DD3741C6E501F23CF4BFA4895A7D7C1 /* Sources */ = {
@@ -617,10 +548,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = CoordiNodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTestComponents;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -674,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeTestComponents;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -684,10 +613,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = CoordiNodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeGenerator;
@@ -713,6 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNode;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -736,6 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNode;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -745,10 +672,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = CoordiNodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,10 +689,6 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = CoordiNodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justinpeckner.CoordiNodeGenerator;
@@ -887,6 +806,22 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		CAD3B321247075DB00ED010F /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.8;
+			};
+		};
+		CAD3B3242470767F00ED010F /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -894,6 +829,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA4C29B3244BA142003A3B55 /* XCRemoteSwiftPackageReference "Yams" */;
 			productName = Yams;
+		};
+		CAD3B322247075DB00ED010F /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAD3B321247075DB00ED010F /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		CAD3B3252470767F00ED010F /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAD3B3242470767F00ED010F /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
