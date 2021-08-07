@@ -69,7 +69,9 @@ public class DestinationRoutingHandler: DestinationRoutingHandlerProtocol {
 
         guard let destinationDescendent =
             TDestinationRouter.TDestinationDescendent(destinationNodeBox: destinationNodeBox)
-        else { return }
+        else {
+            return
+        }
 
         router.performRouting(from: currentNode,
                               to: destinationDescendent)
