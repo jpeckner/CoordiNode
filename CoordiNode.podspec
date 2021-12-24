@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = "A lightweight Swift framework for predictably and safely managing your app's coordinator flow."
   s.homepage = 'https://github.com/jpeckner/CoordiNode'
   s.authors = { 'Justin Peckner' => 'pecknerj@gmail.com' }
-  s.source = { :git => 'https://github.com/jpeckner/CoordiNode.git', :tag => '1.0.2' }
+  s.source = { :git => 'https://github.com/jpeckner/CoordiNode.git', :tag => 'v1.0.2' }
 
   s.ios.deployment_target = '11.0'
   s.source_files = 'CoordiNode/**/*.swift'
