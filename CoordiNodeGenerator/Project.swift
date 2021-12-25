@@ -26,7 +26,7 @@ import Foundation
 
 struct Project {
     static let current = Project(projectName: "CoordiNode",
-                                 version: "1.0.3",
+                                 version: "1.0.4",
                                  projectURL: "https://github.com/jpeckner/CoordiNode")
 
     let projectName: String
