@@ -25,24 +25,24 @@
 import Foundation
 
 public protocol ImmediateDescendentProtocol {
-    init?(nodeBox: NodeBox)
-
     var nodeBox: NodeBox { get }
+
+    init?(nodeBox: NodeBox)
 }
 
 public protocol DestinationDescendentProtocol {
-    init?(destinationNodeBox: DestinationNodeBox)
-
     var destinationNodeBox: DestinationNodeBox { get }
+
+    init?(destinationNodeBox: DestinationNodeBox)
 }
 
 public protocol DescendentProtocol {
     associatedtype TImmediateDescendent: ImmediateDescendentProtocol
     associatedtype TDestinationDescendent: DestinationDescendentProtocol
 
-    init?(nodeBox: NodeBox)
-    init(destinationDescendent: TDestinationDescendent)
-
     var nodeBox: NodeBox { get }
     var immediateDescendent: TImmediateDescendent { get }
+
+    init?(nodeBox: NodeBox)
+    init(destinationDescendent: TDestinationDescendent)
 }
