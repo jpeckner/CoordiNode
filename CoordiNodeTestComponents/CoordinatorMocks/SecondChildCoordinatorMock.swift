@@ -75,7 +75,9 @@ public enum SecondChildCoordinatorMockDescendent: DescendentProtocol, CaseIterab
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -119,7 +121,9 @@ public enum SecondChildCoordinatorMockImmediateDescendent: ImmediateDescendentPr
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockImmediateDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -145,7 +149,9 @@ public enum SecondChildCoordinatorMockDestinationDescendent: DestinationDescende
     public init?(destinationNodeBox: DestinationNodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockDestinationDescendent.allCases.first {
             $0.destinationNodeBox == destinationNodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
