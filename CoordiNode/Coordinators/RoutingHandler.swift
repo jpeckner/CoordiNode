@@ -26,55 +26,92 @@ import Foundation
 
 // MARK: RoutingHandler
 
+public enum RoutingHandlerResult<TDescendent: DescendentProtocol> {
+    public typealias TDestinationDescendent = TDescendent.TDestinationDescendent
+
+    case createSubtree(currentNode: NodeBox,
+                       destinationDescendent: TDestinationDescendent)
+
+    case switchSubtree(currentNode: TDescendent,
+                       destinationDescendent: TDestinationDescendent)
+}
+
 public protocol RoutingHandlerProtocol {
-    func handleRouting<TRouter: RouterProtocol>(from currentNode: NodeBox,
-                                                to destinationDescendent: TRouter.TDestinationDescendent,
-                                                for router: TRouter)
+    func determineRouting<TRouter: RouterProtocol>(
+        from currentNode: NodeBox,
+        to destinationDescendent: TRouter.TDestinationDescendent,
+        for router: TRouter
+    ) -> RoutingHandlerResult<TRouter.TDescendent>?
 }
 
 public class RoutingHandler: RoutingHandlerProtocol {
 
     public init() {}
 
-    public func handleRouting<TRouter: RouterProtocol>(from currentNode: NodeBox,
-                                                       to destinationDescendent: TRouter.TDestinationDescendent,
-                                                       for router: TRouter) {
-        router.performRouting(from: currentNode,
-                              to: destinationDescendent)
+    public func determineRouting<TRouter: RouterProtocol>(
+        from currentNode: NodeBox,
+        to destinationDescendent: TRouter.TDestinationDescendent,
+        for router: TRouter
+    ) -> RoutingHandlerResult<TRouter.TDescendent>? {
+        return router.performRouting(from: currentNode,
+                                     to: destinationDescendent)
     }
 
 }
 
 // MARK: DestinationRoutingHandler
 
+public enum DestinationRoutingHandlerResult<TDescendent: DescendentProtocol> {
+    public typealias TDestinationDescendent = TDescendent.TDestinationDescendent
+
+    case createSubtree(currentNode: NodeBox,
+                       destinationDescendent: TDestinationDescendent)
+
+    case switchSubtree(currentNode: TDescendent,
+                       destinationDescendent: TDestinationDescendent)
+
+    case closeAllSubtrees(currentNode: NodeBox)
+}
+
 public protocol DestinationRoutingHandlerProtocol {
-    func handleRouting<TDestinationRouter: DestinationRouterProtocol>(from currentNode: NodeBox,
-                                                                      to destinationNodeBox: DestinationNodeBox,
-                                                                      for router: TDestinationRouter)
+    func determineRouting<TDestinationRouter: DestinationRouterProtocol>(
+        from currentNode: NodeBox,
+        to destinationNodeBox: DestinationNodeBox,
+        for router: TDestinationRouter
+    ) -> DestinationRoutingHandlerResult<TDestinationRouter.TDescendent>?
 }
 
 public class DestinationRoutingHandler: DestinationRoutingHandlerProtocol {
 
     public init() {}
 
-    public func handleRouting<TDestinationRouter: DestinationRouterProtocol>(
+    public func determineRouting<TDestinationRouter: DestinationRouterProtocol>(
         from currentNode: NodeBox,
         to destinationNodeBox: DestinationNodeBox,
         for router: TDestinationRouter
-    ) {
+    ) -> DestinationRoutingHandlerResult<TDestinationRouter.TDescendent>? {
         guard TDestinationRouter.destinationNodeBox != destinationNodeBox else {
-            router.closeAllSubtrees(currentNode: currentNode)
-            return
+            return .closeAllSubtrees(currentNode: currentNode)
         }
 
         guard let destinationDescendent =
             TDestinationRouter.TDestinationDescendent(destinationNodeBox: destinationNodeBox)
         else {
-            return
+            return nil
         }
 
-        router.performRouting(from: currentNode,
-                              to: destinationDescendent)
+        let routerResult = router.performRouting(from: currentNode,
+                                                 to: destinationDescendent)
+        switch routerResult {
+        case let .createSubtree(currentNode, destinationDescendent):
+            return .createSubtree(currentNode: currentNode,
+                                  destinationDescendent: destinationDescendent)
+        case let .switchSubtree(currentNode, destinationDescendent):
+            return .switchSubtree(currentNode: currentNode,
+                                  destinationDescendent: destinationDescendent)
+        case .none:
+            return nil
+        }
     }
 
 }
@@ -84,23 +121,23 @@ public class DestinationRoutingHandler: DestinationRoutingHandlerProtocol {
 private extension RouterProtocol {
 
     func performRouting(from currentNode: NodeBox,
-                        to destinationDescendent: TDestinationDescendent) {
+                        to destinationDescendent: TDestinationDescendent) -> RoutingHandlerResult<TDescendent>? {
         guard let currentDescendent = TDescendent(nodeBox: currentNode) else {
-            createSubtree(towards: destinationDescendent)
-            return
+            return .createSubtree(currentNode: currentNode,
+                                  destinationDescendent: destinationDescendent)
         }
 
         let rootOfCurrentSubtree = currentDescendent.immediateDescendent
         let rootOfDestinationSubtree = TDescendent(destinationDescendent: destinationDescendent).immediateDescendent
         let destinationSubtreeAlreadyActive = rootOfCurrentSubtree.nodeBox == rootOfDestinationSubtree.nodeBox
         guard destinationSubtreeAlreadyActive else {
-            switchSubtree(from: currentDescendent,
-                          to: destinationDescendent)
-            return
+            return .switchSubtree(currentNode: currentDescendent,
+                                  destinationDescendent: destinationDescendent)
         }
 
         // Nothing to do (the subtree with destinationDescendent is already active, so one of its coordinators will
         // handle this routing)
+        return nil
     }
 
 }

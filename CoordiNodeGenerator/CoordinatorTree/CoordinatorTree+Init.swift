@@ -67,8 +67,8 @@ private extension CoordinatorTree {
         try validateEnumCaseNames(allTrees)
     }
 
-    private func validateCoordinatorNames(_ allTrees: [CoordinatorTree]) throws {
-        let duplicates = allTrees.filterDuplicates { $0.name }
+    private func validateCoordinatorNames(_ trees: [CoordinatorTree]) throws {
+        let duplicates = trees.filterDuplicates { $0.name }
         guard duplicates.isEmpty else {
             throw CoordinatorTreeError.containsDuplicateCoordinatorNames(duplicates)
         }
