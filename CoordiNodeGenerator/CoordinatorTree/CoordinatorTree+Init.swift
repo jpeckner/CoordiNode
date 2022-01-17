@@ -94,17 +94,19 @@ private extension CoordinatorTree {
             : .notImmediateChild(self, owningImmediateChild: owningImmediateChild)
         allChildren.append(childType)
 
+        if nodeProperties.isDestinationNode {
+            destinationChildren.append(self)
+        }
+
         switch self {
         case .leaf:
-            if nodeProperties.isDestinationNode {
-                destinationChildren.append(self)
-            }
+            break
         case let .nonLeaf(_, treeChildren):
-            treeChildren.allChildren.forEach {
-                $0.tree.gatherChildren(owningImmediateChild: owningImmediateChild,
-                                       isImmediateChild: false,
-                                       destinationChildren: &destinationChildren,
-                                       allChildren: &allChildren)
+            treeChildren.immediateChildren.forEach {
+                $0.gatherChildren(owningImmediateChild: owningImmediateChild,
+                                  isImmediateChild: false,
+                                  destinationChildren: &destinationChildren,
+                                  allChildren: &allChildren)
             }
         }
     }

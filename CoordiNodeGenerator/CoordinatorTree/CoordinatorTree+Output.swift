@@ -112,7 +112,9 @@ private extension CoordinatorTree {
             init?(nodeBox: NodeBox) {
                 guard let matchingCase = (\(name)Descendent.allCases.first {
                     $0.nodeBox == nodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
@@ -159,7 +161,9 @@ private extension CoordinatorTree {
             init?(nodeBox: NodeBox) {
                 guard let matchingCase = (\(name)ImmediateDescendent.allCases.first {
                     $0.nodeBox == nodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
@@ -188,7 +192,9 @@ private extension CoordinatorTree {
             init?(destinationNodeBox: DestinationNodeBox) {
                 guard let matchingCase = (\(name)DestinationDescendent.allCases.first {
                     $0.destinationNodeBox == destinationNodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
