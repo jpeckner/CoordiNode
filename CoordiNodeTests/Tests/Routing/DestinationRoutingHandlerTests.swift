@@ -42,77 +42,102 @@ class DestinationRoutingHandlerTests: QuickSpec {
             destinationRoutingHandler = DestinationRoutingHandler()
         }
 
-        describe("handleRouting()") {
+        describe("determineRouting()") {
 
             context("when the to: arg is equal to the coordinator's destinationNodeBox") {
+                var result: DestinationRoutingHandlerResult<SecondChildCoordinatorMock.TDescendent>?
+
                 beforeEach {
-                    destinationRoutingHandler.handleRouting(
+                    result = destinationRoutingHandler.determineRouting(
                         from: OtherMockNode.nodeBox,
                         to: SecondChildCoordinatorMockNode.destinationNodeBox,
                         for: mockDestinationCoordinator
                     )
                 }
 
-                it("calls mockCoordinator.closeAllSubtrees()") {
-                    expect(mockDestinationCoordinator.receivedCloseAllSubtreesCurrentNode) == OtherMockNode.nodeBox
+                it("return .closeAllSubtrees") {
+                    guard case let .closeAllSubtrees(currentNode) = result else {
+                        fail()
+                        return
+                    }
+
+                    expect(currentNode) == OtherMockNode.nodeBox
                 }
             }
 
             context("else when the to: arg is not a descendent of the coordinator") {
+                var result: DestinationRoutingHandlerResult<SecondChildCoordinatorMock.TDescendent>?
+
                 beforeEach {
-                    destinationRoutingHandler.handleRouting(from: SecondGrandchildCoordinatorMockNode.nodeBox,
-                                                            to: OtherMockNode.destinationNodeBox,
-                                                            for: mockDestinationCoordinator)
+                    result = destinationRoutingHandler.determineRouting(
+                        from: SecondGrandchildCoordinatorMockNode.nodeBox,
+                        to: OtherMockNode.destinationNodeBox,
+                        for: mockDestinationCoordinator
+                    )
                 }
 
-                it("does not call any of its protocol methods") {
-                    expect(mockDestinationCoordinator.receivedCreateSubtreeDestinationDescendent).to(beNil())
-                    expect(mockDestinationCoordinator.receivedSwitchSubtreeArgs).to(beNil())
-                    expect(mockDestinationCoordinator.receivedCloseAllSubtreesCurrentNode).to(beNil())
+                it("returns nil") {
+                    expect(result).to(beNil())
                 }
             }
 
             context("else when the from: arg is not a descendent of the coordinator") {
+                var result: DestinationRoutingHandlerResult<SecondChildCoordinatorMock.TDescendent>?
+
                 beforeEach {
-                    let value = FirstGrandchildCoordinatorMockNode.destinationNodeBox
-                    destinationRoutingHandler.handleRouting(from: OtherMockNode.nodeBox,
-                                                            to: value,
-                                                            for: mockDestinationCoordinator)
+                    result = destinationRoutingHandler.determineRouting(
+                        from: OtherMockNode.nodeBox,
+                        to: FirstGrandchildCoordinatorMockNode.destinationNodeBox,
+                        for: mockDestinationCoordinator
+                    )
                 }
 
-                it("calls mockCoordinator.createSubtree(towards:)") {
-                    expect(mockDestinationCoordinator.receivedCreateSubtreeDestinationDescendent) == .firstGrandchild
+                it("returns .createSubtree") {
+                    guard case let .createSubtree(currentNode, destinationDescendent) = result else {
+                        fail()
+                        return
+                    }
+
+                    expect(currentNode) == OtherMockNode.nodeBox
+                    expect(destinationDescendent) == .firstGrandchild
                 }
             }
 
             context("else when the from: arg is part of a different subtree than the destinationDescendent arg") {
+                var result: DestinationRoutingHandlerResult<SecondChildCoordinatorMock.TDescendent>?
+
                 beforeEach {
-                    destinationRoutingHandler.handleRouting(
+                    result = destinationRoutingHandler.determineRouting(
                         from: SecondGrandchildCoordinatorMock.nodeBox,
                         to: FirstGrandchildCoordinatorMockNode.destinationNodeBox,
                         for: mockDestinationCoordinator
                     )
                 }
 
-                it("calls mockCoordinator.switchSubtree(towards:)") {
-                    expect(mockDestinationCoordinator.receivedSwitchSubtreeArgs?.0) == .secondGrandchild
-                    expect(mockDestinationCoordinator.receivedSwitchSubtreeArgs?.1) == .firstGrandchild
+                it("returns .switchSubtree") {
+                    guard case let .switchSubtree(currentNode, destinationDescendent) = result else {
+                        fail()
+                        return
+                    }
+
+                    expect(currentNode) == .secondGrandchild
+                    expect(destinationDescendent) == .firstGrandchild
                 }
             }
 
             context("else when the from: arg is part of the same subtree as the destinationDescendent arg") {
+                var result: DestinationRoutingHandlerResult<SecondChildCoordinatorMock.TDescendent>?
+
                 beforeEach {
-                    destinationRoutingHandler.handleRouting(
+                    result = destinationRoutingHandler.determineRouting(
                         from: FirstGrandchildCoordinatorMock.nodeBox,
                         to: FirstGrandchildCoordinatorMockNode.destinationNodeBox,
                         for: mockDestinationCoordinator
                     )
                 }
 
-                it("does not call any of its protocol methods") {
-                    expect(mockDestinationCoordinator.receivedCreateSubtreeDestinationDescendent).to(beNil())
-                    expect(mockDestinationCoordinator.receivedSwitchSubtreeArgs).to(beNil())
-                    expect(mockDestinationCoordinator.receivedCloseAllSubtreesCurrentNode).to(beNil())
+                it("returns nil") {
+                    expect(result).to(beNil())
                 }
             }
 

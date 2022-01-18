@@ -38,6 +38,7 @@
 		CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */; };
 		CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C299D244B8182003A3B55 /* StubNode.swift */; };
 		CA4C29B5244BA142003A3B55 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = CA4C29B4244BA142003A3B55 /* Yams */; };
+		CA784C8A2796261E00FE76CC /* DestinationRoutingHandlerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA784C892796261E00FE76CC /* DestinationRoutingHandlerProtocolMock.swift */; };
 		CAD3B323247075DB00ED010F /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = CAD3B322247075DB00ED010F /* Nimble */; };
 		CAD3B3262470767F00ED010F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = CAD3B3252470767F00ED010F /* Quick */; };
 		CBDCFE9698E8DC2B3AE4144EEBE474DE /* DescendentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7456FE380572C878B03F75E02503A7 /* DescendentProtocol.swift */; };
@@ -112,6 +113,7 @@
 		C649962FDAD5E61AB5D56F2A8B53773F /* SecondGrandchildCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrandchildCoordinatorMock.swift; sourceTree = "<group>"; };
 		CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingHandlerProtocolMock.swift; sourceTree = "<group>"; };
 		CA4C299D244B8182003A3B55 /* StubNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubNode.swift; sourceTree = "<group>"; };
+		CA784C892796261E00FE76CC /* DestinationRoutingHandlerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationRoutingHandlerProtocolMock.swift; sourceTree = "<group>"; };
 		CBF207E87C09994D45B8BD368F18E715 /* CoordinatorTree+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorTree+Init.swift"; sourceTree = "<group>"; };
 		D901E979006D0E5E80C1FBEDFCE66317 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		E10200FB9EDF909DC1FF3D7946916845 /* CoordiNodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordiNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,11 +229,20 @@
 			isa = PBXGroup;
 			children = (
 				22C287FD3AAD376B72A0317711CB6AB2 /* CoordinatorMocks */,
-				CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */,
+				CA784C88279625FE00FE76CC /* RouterMocks */,
 				CA4C299D244B8182003A3B55 /* StubNode.swift */,
 				7253D6821EAACD42F2D0DA9C209C9398 /* Info.plist */,
 			);
 			path = CoordiNodeTestComponents;
+			sourceTree = "<group>";
+		};
+		CA784C88279625FE00FE76CC /* RouterMocks */ = {
+			isa = PBXGroup;
+			children = (
+				CA784C892796261E00FE76CC /* DestinationRoutingHandlerProtocolMock.swift */,
+				CA4C299C244B8181003A3B55 /* RoutingHandlerProtocolMock.swift */,
+			);
+			path = RouterMocks;
 			sourceTree = "<group>";
 		};
 		D978D86E37FAF81C87AE1CBD59062076 = {
@@ -448,6 +459,7 @@
 			files = (
 				CA4C299E244B8182003A3B55 /* RoutingHandlerProtocolMock.swift in Sources */,
 				8C77C9B5261A64F726B82482FDACA1F5 /* FirstChildCoordinatorMock.swift in Sources */,
+				CA784C8A2796261E00FE76CC /* DestinationRoutingHandlerProtocolMock.swift in Sources */,
 				CA4C299F244B8182003A3B55 /* StubNode.swift in Sources */,
 				4FCF14660DFCB1640128247103BD5686 /* FirstGrandchildCoordinatorMock.swift in Sources */,
 				22E56FC48155325906FE92A32F32FB9E /* RootCoordinatorMock.swift in Sources */,

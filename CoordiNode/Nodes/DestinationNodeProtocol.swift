@@ -29,7 +29,7 @@ public protocol DestinationNodeProtocol: NodeProtocol {}
 public extension DestinationNodeProtocol {
 
     static var destinationNodeBox: DestinationNodeBox {
-        return DestinationNodeBox(Self.self)
+        DestinationNodeBox(Self.self)
     }
 
 }
@@ -40,6 +40,14 @@ public struct DestinationNodeBox {
     public init(_ storedType: DestinationNodeProtocol.Type) {
         self.storedType = storedType
     }
+}
+
+public extension DestinationNodeBox {
+
+    var asNodeBox: NodeBox {
+        NodeBox(storedType)
+    }
+
 }
 
 extension DestinationNodeBox: Equatable {

@@ -26,36 +26,16 @@ import CoordiNode
 
 public enum RootCoordinatorMockNode: NodeProtocol {}
 
-public class RootCoordinatorMock: RouterProtocol, RootCoordinatorProtocol {
+open class RootCoordinatorMock: RouterProtocol, RootCoordinatorProtocol {
 
     public typealias TDescendent = RootCoordinatorMockDescendent
-
-    public init() {}
-
-    // MARK: createSubtree()
-
-    // swiftlint:disable identifier_name
-    public private(set) var receivedCreateSubtreeDestinationDescendent: RootCoordinatorMockDestinationDescendent?
-
-    public func createSubtree(towards destinationDescendent: RootCoordinatorMockDestinationDescendent) {
-        receivedCreateSubtreeDestinationDescendent = destinationDescendent
-    }
-
-    // MARK: switchSubtree()
-
-    public private(set) var receivedSwitchSubtreeArgs: (
-        currentDescendent: RootCoordinatorMockDescendent,
-        destinationDescendent: RootCoordinatorMockDestinationDescendent
-    )?
-
-    public func switchSubtree(from currentDescendent: RootCoordinatorMockDescendent,
-                              to destinationDescendent: RootCoordinatorMockDestinationDescendent) {
-        receivedSwitchSubtreeArgs = (currentDescendent, destinationDescendent)
-    }
 
     public static var nodeBox: NodeBox {
         return RootCoordinatorMockNode.nodeBox
     }
+
+    public init() {}
+
 }
 
 // MARK: RootCoordinatorMockDescendent
