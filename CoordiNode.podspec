@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CoordiNode'
-  s.version = '1.0.4'
+  s.version = '1.1.0'
   s.summary = "A lightweight Swift framework for predictably and safely managing your app's coordinator flow."
   s.homepage = 'https://github.com/jpeckner/CoordiNode'
   s.authors = { 'Justin Peckner' => 'pecknerj@gmail.com' }
