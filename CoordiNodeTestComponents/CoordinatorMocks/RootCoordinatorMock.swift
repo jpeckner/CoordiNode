@@ -26,36 +26,16 @@ import CoordiNode
 
 public enum RootCoordinatorMockNode: NodeProtocol {}
 
-public class RootCoordinatorMock: RouterProtocol, RootCoordinatorProtocol {
+open class RootCoordinatorMock: RouterProtocol, RootCoordinatorProtocol {
 
     public typealias TDescendent = RootCoordinatorMockDescendent
-
-    public init() {}
-
-    // MARK: createSubtree()
-
-    // swiftlint:disable identifier_name
-    public private(set) var receivedCreateSubtreeDestinationDescendent: RootCoordinatorMockDestinationDescendent?
-
-    public func createSubtree(towards destinationDescendent: RootCoordinatorMockDestinationDescendent) {
-        receivedCreateSubtreeDestinationDescendent = destinationDescendent
-    }
-
-    // MARK: switchSubtree()
-
-    public private(set) var receivedSwitchSubtreeArgs: (
-        currentDescendent: RootCoordinatorMockDescendent,
-        destinationDescendent: RootCoordinatorMockDestinationDescendent
-    )?
-
-    public func switchSubtree(from currentDescendent: RootCoordinatorMockDescendent,
-                              to destinationDescendent: RootCoordinatorMockDestinationDescendent) {
-        receivedSwitchSubtreeArgs = (currentDescendent, destinationDescendent)
-    }
 
     public static var nodeBox: NodeBox {
         return RootCoordinatorMockNode.nodeBox
     }
+
+    public init() {}
+
 }
 
 // MARK: RootCoordinatorMockDescendent
@@ -69,7 +49,9 @@ public enum RootCoordinatorMockDescendent: DescendentProtocol, CaseIterable {
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (RootCoordinatorMockDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -122,7 +104,9 @@ public enum RootCoordinatorMockImmediateDescendent: ImmediateDescendentProtocol,
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (RootCoordinatorMockImmediateDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -148,7 +132,9 @@ public enum RootCoordinatorMockDestinationDescendent: DestinationDescendentProto
     public init?(destinationNodeBox: DestinationNodeBox) {
         guard let matchingCase = (RootCoordinatorMockDestinationDescendent.allCases.first {
             $0.destinationNodeBox == destinationNodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }

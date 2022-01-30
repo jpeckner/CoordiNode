@@ -99,25 +99,32 @@ private extension CoordinatorTree {
     func descendentOutput(_ name: String,
                           treeChildren: TreeChildren) -> String {
         return """
-        // MARK: \(name)Descendent
 
-        enum \(name)Descendent: CaseIterable {
+        extension \(name) {
+            typealias TDescendent = \(descendentEnumTypeName)
+        }
+
+        // MARK: \(descendentEnumTypeName)
+
+        enum \(descendentEnumTypeName): CaseIterable {
         \(mapMultiLineString(treeChildren.allChildTrees) { """
             case \($0.enumCaseName)
         """})
         }
 
-        extension \(name)Descendent: DescendentProtocol {
+        extension \(descendentEnumTypeName): DescendentProtocol {
 
             init?(nodeBox: NodeBox) {
-                guard let matchingCase = (\(name)Descendent.allCases.first {
+                guard let matchingCase = (\(descendentEnumTypeName).allCases.first {
                     $0.nodeBox == nodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
 
-            init(destinationDescendent: \(name)DestinationDescendent) {
+            init(destinationDescendent: \(destinationDescendentEnumTypeName)) {
                 switch destinationDescendent {
         \(mapMultiLineString(treeChildren.destinationChildren) { """
                 case .\($0.enumCaseName):
@@ -135,7 +142,7 @@ private extension CoordinatorTree {
                 }
             }
 
-            var immediateDescendent: \(name)ImmediateDescendent {
+            var immediateDescendent: \(immediateDescendentEnumTypeName) {
                 switch self {
         \(mapMultiLineString(treeChildren.allChildren) { """
                 case .\($0.tree.enumCaseName):
@@ -146,20 +153,22 @@ private extension CoordinatorTree {
 
         }
 
-        // MARK: \(name)ImmediateDescendent
+        // MARK: \(immediateDescendentEnumTypeName)
 
-        enum \(name)ImmediateDescendent: CaseIterable {
+        enum \(immediateDescendentEnumTypeName): CaseIterable {
         \(mapMultiLineString(treeChildren.immediateChildren) { """
             case \($0.enumCaseName)
         """})
         }
 
-        extension \(name)ImmediateDescendent: ImmediateDescendentProtocol {
+        extension \(immediateDescendentEnumTypeName): ImmediateDescendentProtocol {
 
             init?(nodeBox: NodeBox) {
-                guard let matchingCase = (\(name)ImmediateDescendent.allCases.first {
+                guard let matchingCase = (\(immediateDescendentEnumTypeName).allCases.first {
                     $0.nodeBox == nodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
@@ -175,20 +184,22 @@ private extension CoordinatorTree {
 
         }
 
-        // MARK: \(name)DestinationDescendent
+        // MARK: \(destinationDescendentEnumTypeName)
 
-        enum \(name)DestinationDescendent: CaseIterable {
+        enum \(destinationDescendentEnumTypeName): CaseIterable {
         \(mapMultiLineString(treeChildren.destinationChildren) { """
             case \($0.enumCaseName)
         """})
         }
 
-        extension \(name)DestinationDescendent: DestinationDescendentProtocol {
+        extension \(destinationDescendentEnumTypeName): DestinationDescendentProtocol {
 
             init?(destinationNodeBox: DestinationNodeBox) {
-                guard let matchingCase = (\(name)DestinationDescendent.allCases.first {
+                guard let matchingCase = (\(destinationDescendentEnumTypeName).allCases.first {
                     $0.destinationNodeBox == destinationNodeBox
-                }) else { return nil }
+                }) else {
+                    return nil
+                }
 
                 self = matchingCase
             }
@@ -215,6 +226,18 @@ private extension CoordinatorTree {
         }
 
         return result
+    }
+
+    private var descendentEnumTypeName: String {
+        "\(name)Descendent"
+    }
+
+    private var destinationDescendentEnumTypeName: String {
+        "\(name)DestinationDescendent"
+    }
+
+    private var immediateDescendentEnumTypeName: String {
+        "\(name)ImmediateDescendent"
     }
 
 }

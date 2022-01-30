@@ -26,44 +26,16 @@ import CoordiNode
 
 public enum SecondChildCoordinatorMockNode: DestinationNodeProtocol {}
 
-public class SecondChildCoordinatorMock: DestinationRouterProtocol {
+open class SecondChildCoordinatorMock: DestinationRouterProtocol {
 
     public typealias TDescendent = SecondChildCoordinatorMockDescendent
-
-    public init() {}
-
-    // MARK: createSubtree()
-
-    // swiftlint:disable identifier_name
-    public private(set) var receivedCreateSubtreeDestinationDescendent: SecondChildCoordinatorMockDestinationDescendent?
-
-    public func createSubtree(towards destinationDescendent: SecondChildCoordinatorMockDestinationDescendent) {
-        receivedCreateSubtreeDestinationDescendent = destinationDescendent
-    }
-
-    // MARK: switchSubtree()
-
-    public private(set) var receivedSwitchSubtreeArgs: (
-        currentDescendent: SecondChildCoordinatorMockDescendent,
-        destinationDescendent: SecondChildCoordinatorMockDestinationDescendent
-    )?
-
-    public func switchSubtree(from currentDescendent: SecondChildCoordinatorMockDescendent,
-                              to destinationDescendent: SecondChildCoordinatorMockDestinationDescendent) {
-        receivedSwitchSubtreeArgs = (currentDescendent, destinationDescendent)
-    }
-
-    // MARK: closeAllSubtrees()
-
-    public private(set) var receivedCloseAllSubtreesCurrentNode: NodeBox?
-
-    public func closeAllSubtrees(currentNode: NodeBox) {
-        receivedCloseAllSubtreesCurrentNode = currentNode
-    }
 
     public static var destinationNodeBox: DestinationNodeBox {
         return SecondChildCoordinatorMockNode.destinationNodeBox
     }
+
+    public init() {}
+
 }
 
 // MARK: SecondChildCoordinatorMockDescendent
@@ -75,7 +47,9 @@ public enum SecondChildCoordinatorMockDescendent: DescendentProtocol, CaseIterab
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -119,7 +93,9 @@ public enum SecondChildCoordinatorMockImmediateDescendent: ImmediateDescendentPr
     public init?(nodeBox: NodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockImmediateDescendent.allCases.first {
             $0.nodeBox == nodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }
@@ -145,7 +121,9 @@ public enum SecondChildCoordinatorMockDestinationDescendent: DestinationDescende
     public init?(destinationNodeBox: DestinationNodeBox) {
         guard let matchingCase = (SecondChildCoordinatorMockDestinationDescendent.allCases.first {
             $0.destinationNodeBox == destinationNodeBox
-        }) else { return nil }
+        }) else {
+            return nil
+        }
 
         self = matchingCase
     }

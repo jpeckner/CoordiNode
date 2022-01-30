@@ -67,8 +67,8 @@ private extension CoordinatorTree {
         try validateEnumCaseNames(allTrees)
     }
 
-    private func validateCoordinatorNames(_ allTrees: [CoordinatorTree]) throws {
-        let duplicates = allTrees.filterDuplicates { $0.name }
+    private func validateCoordinatorNames(_ trees: [CoordinatorTree]) throws {
+        let duplicates = trees.filterDuplicates { $0.name }
         guard duplicates.isEmpty else {
             throw CoordinatorTreeError.containsDuplicateCoordinatorNames(duplicates)
         }
@@ -94,17 +94,19 @@ private extension CoordinatorTree {
             : .notImmediateChild(self, owningImmediateChild: owningImmediateChild)
         allChildren.append(childType)
 
+        if nodeProperties.isDestinationNode {
+            destinationChildren.append(self)
+        }
+
         switch self {
         case .leaf:
-            if nodeProperties.isDestinationNode {
-                destinationChildren.append(self)
-            }
+            break
         case let .nonLeaf(_, treeChildren):
-            treeChildren.allChildren.forEach {
-                $0.tree.gatherChildren(owningImmediateChild: owningImmediateChild,
-                                       isImmediateChild: false,
-                                       destinationChildren: &destinationChildren,
-                                       allChildren: &allChildren)
+            treeChildren.immediateChildren.forEach {
+                $0.gatherChildren(owningImmediateChild: owningImmediateChild,
+                                  isImmediateChild: false,
+                                  destinationChildren: &destinationChildren,
+                                  allChildren: &allChildren)
             }
         }
     }
