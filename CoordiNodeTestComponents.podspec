@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CoordiNodeTestComponents'
-  s.version = '1.1.0'
+  s.version = '1.1.1'
   s.summary = 'Test components for CoordiNode framework.'
   s.homepage = 'https://github.com/jpeckner/CoordiNode'
   s.authors = { 'Justin Peckner' => 'pecknerj@gmail.com' }
