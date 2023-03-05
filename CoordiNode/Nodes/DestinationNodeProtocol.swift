@@ -34,7 +34,7 @@ public extension DestinationNodeProtocol {
 
 }
 
-public struct DestinationNodeBox {
+public struct DestinationNodeBox: Sendable {
     public let storedType: DestinationNodeProtocol.Type
 
     public init(_ storedType: DestinationNodeProtocol.Type) {
