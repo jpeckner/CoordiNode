@@ -61,7 +61,7 @@ private extension CoordinatorTree {
 
     private var destinationNodeBoxProperty: String {
         return """
-            static var destinationNodeBox: DestinationNodeBox {
+            nonisolated static var destinationNodeBox: DestinationNodeBox {
                 return \(name)Node.destinationNodeBox
             }
         """
@@ -69,7 +69,7 @@ private extension CoordinatorTree {
 
     private var nodeBoxProperty: String {
         return """
-            static var nodeBox: NodeBox {
+            nonisolated static var nodeBox: NodeBox {
                 return \(name)Node.nodeBox
             }
         """
