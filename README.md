@@ -6,21 +6,13 @@ CoordiNode provides the tools you need to manage this flow in a simple, clean, a
 
 # Installation
 
-### CocoaPods
+### Swift Package Manager (SPM)
 
-Add the following to your Podfile, then run `pod install`:
+Point SPM to https://github.com/jpeckner/CoordiNode.git (matching to an exact version is recommended)
 
-`pod 'CoordiNode', :git => 'https://github.com/jpeckner/CoordiNode.git', :branch => 'master'`
+### Manually
 
-### Carthage
-
-Add the following to your Cartfile, then run `carthage update CoordiNode`:
-
-`github "jpeckner/CoordiNode"`
-
-### Submodule/manually
-
-If you prefer not to use either of the above dependency managers, you can integrate CoordiNode into your project manually.
+If you prefer not to use SPM, you can integrate SwiftDux into your project manually.
 
 # Usage
 
