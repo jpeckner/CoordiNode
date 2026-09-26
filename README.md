@@ -12,7 +12,7 @@ Point SPM to https://github.com/jpeckner/CoordiNode.git (matching to an exact ve
 
 ### Manually
 
-If you prefer not to use SPM, you can integrate SwiftDux into your project manually.
+If you prefer not to use SPM, you can integrate CoordiNode into your project manually.
 
 # Usage
 
